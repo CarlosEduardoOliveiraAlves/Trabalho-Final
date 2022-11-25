@@ -21,8 +21,8 @@ public class Funcionario extends Pessoa{
         this.nivelDeAcesso = nivelDeAcesso;
     }
 
-    public Funcionario(int id, String nome, char sexo, Date dataNascimento, String telefone, String email, String rg, String senha, String nivelDeAcesso) {
-        super(id, nome, sexo, dataNascimento, telefone, email, rg);
+    public Funcionario(int id, String nome, char sexo, String dataNascimento, String telefone, String email, String senha, String nivelDeAcesso) {
+        super(id, nome, sexo, dataNascimento, telefone, email);
         this.senha = senha;
         this.nivelDeAcesso = nivelDeAcesso;
     }

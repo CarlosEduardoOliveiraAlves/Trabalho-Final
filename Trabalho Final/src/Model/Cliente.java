@@ -4,6 +4,7 @@
  */
 package Model;
 
+import Model.Pessoa;
 import java.util.Date;
 
 /**
@@ -14,17 +15,21 @@ public class Cliente extends Pessoa{
 
     protected String endereco;
     protected String cep;
+    protected String senhaCliente;
+    
 
-    public Cliente(int id, String nome, char sexo, Date dataNascimento, String telefone, String email, String rg,String endereco, String cep) {
-        super(id, nome, sexo, dataNascimento, telefone, email, rg);
+    public Cliente(int id, String nome, String senhaCliente, char sexo, String dataNascimento, String telefone, String email,String endereco, String cep) {
+        super(id, nome, sexo, dataNascimento, telefone, email);
         this.endereco = endereco;
         this.cep = cep;
+        this.senhaCliente = senhaCliente;
     }
 
-    public Cliente(int id, String nome, String endereco, String cep) {
+    public Cliente(int id, String nome, String senhaCliente,String endereco, String cep) {
         super(id, nome);
         this.endereco = endereco;
         this.cep = cep;
+        this.senhaCliente = senhaCliente;
     }
 
     public String getEndereco() {
@@ -43,6 +48,12 @@ public class Cliente extends Pessoa{
         this.cep = cep;
     }
 
+    public String getSenhaCliente() {
+        return senhaCliente;
+    }
+
+    public void setSenhaCliente(String senhaCliente) {
+        this.senhaCliente = senhaCliente;
+    }
     
- 
 }
